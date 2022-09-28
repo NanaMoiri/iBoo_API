@@ -1,0 +1,31 @@
+{% include '/partials/header.html.twig' %}
+    <main>
+        <div class="container">
+            <h2>ADD PRODUCT TO DATABASE</h2>
+            <form action="/catalog/product/new" method="POST">
+                <label for="Name">Name:</label>
+                <input type="text" name="name">
+
+                <label for="type">Type:</label>
+                <input type="text" name="type">
+
+                <label for="description">Description</label>
+                <input type="text" name="description">
+
+                <label for="weight">Weight: (format example: 100gr)</label>
+                <input type="text" name="weight">
+
+                <label for="image"></label>
+                <input type="file" name="image" accept=".jpeg,.jpg,.png">
+
+                <label for="checkbox">Is enabled?</label>
+                <input type="checkbox" name="checkbox">
+
+                <input type="submit" value="Add product">
+            </form>
+        </div>
+        {% include '/partials/aside.html.twig' %}
+    </main>
+    {% include '/partials/footer.html.twig' %}
+</body>
+</html>

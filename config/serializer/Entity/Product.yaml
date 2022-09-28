@@ -1,0 +1,16 @@
+App\Entity\Product:
+    attributes:
+        id:
+            groups: ['product']
+        type:
+            groups: ['product']
+        name:
+            groups: ['product']
+        description:
+            groups: ['product']
+        weight:
+            groups: ['product']
+        image:
+            groups: ['product']
+        enabled:
+            groups: ['product']

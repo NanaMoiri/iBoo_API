@@ -1,0 +1,27 @@
+{% include '/partials/header.html.twig' %}
+    <main>
+        <div>
+            <h2>CATALOG FOR ALL PRODUCTS</h2>
+            <article>
+                {% for product in products_Array %}
+                <div>
+                    <label for="name">Name:</label>
+                    <h4 name="name">{{ product.name }}</h4>
+                    <label for="id">Id:</label>
+                    <h4 name="id">{{ product.id }}</h4>
+                    <label for="type">Type:</label>
+                    <h4 name="type">{{ product.type }}</h4>
+                    <img src="{{ asset('/storage/default/'~ product.image ~'') }}" alt="">
+                    <label for="description">Description</label>
+                    <p name="description">{{ product.description }}</p>
+                    <label for="weight">Weight</label>
+                    <h4 name="weight">{{ product.weight }} </h4>
+                </div>
+        {% endfor %}
+            </article>
+        </div>
+        {% include '/partials/aside.html.twig' %}
+    </main>
+    {% include '/partials/footer.html.twig' %}
+</body>
+</html>
